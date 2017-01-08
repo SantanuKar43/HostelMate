@@ -1,2 +1,2 @@
 # HostelMate
-a java implementation of an idea borrowed from LPlenka's hostel doors project
+a java implementation of an idea borrowed from LPlenka's(https://github.com/Lplenka) hostel doors project
