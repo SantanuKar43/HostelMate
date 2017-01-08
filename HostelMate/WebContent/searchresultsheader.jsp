@@ -42,7 +42,9 @@
         <div class="collapse navbar-toggleable-xs" id="collapseEx2">
             <!--Navbar Brand-->
             <a class="navbar-brand" href="index.jsp"><i class="fa fa-building-o"></i> HostelMate</a>
-            
+            <form class="form-inline">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
         </div>
         <!--/.Collapse content-->
 

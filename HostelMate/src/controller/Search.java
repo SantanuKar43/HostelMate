@@ -14,7 +14,6 @@ public class Search extends HttpServlet {
  protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	// TODO Auto-generated method stub
 	String search = req.getParameter("search");
-	System.out.println("working"+search);
 	resp.sendRedirect("searchresults.jsp");
  }
 }
