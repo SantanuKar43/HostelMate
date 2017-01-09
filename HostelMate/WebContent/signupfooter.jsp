@@ -20,7 +20,6 @@
                 <h5 class="title">About Us</h5>
                 <ul>
                     <li><a href="#!">Santanu Kar</a></li>
-                    <li><a href="#!">Sanskriti Mohapatra</a></li>
                 </ul>
             </div>
             <!--/.Second column-->

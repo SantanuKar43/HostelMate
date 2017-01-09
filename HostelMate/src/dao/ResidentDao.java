@@ -35,4 +35,5 @@ public class ResidentDao {
 		session.close();
 		return list;
 	}
+	
 }

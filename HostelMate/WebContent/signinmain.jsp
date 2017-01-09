@@ -8,7 +8,7 @@
 	%>
 	<p style="width:40%;margin:auto;text-align:center" class="text-danger">Error: <%=msg %></p>
 	<%} %>
-<form action="controller.SignUp" method="post">
+<form action="controller.SignIn" method="post">
 <!--Form without header-->
 <div class="card" style="width:40%;margin:25px auto">
     <div class="card-block">
