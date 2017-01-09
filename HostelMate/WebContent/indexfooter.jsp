@@ -31,7 +31,8 @@
         <ul>
             <li>
                 <h5>Register yourself and make it easy for others to find you!</h5></li>
-            <li><a href="signup.jsp" class="btn btn-danger">Sign up!</a></li>
+            <li><a href="signup.jsp" class="btn btn-danger">Sign up!</a></li> 	
+            <li><a href="#" class="btn btn-primary">EDIT PROFILE!</a></li>
         </ul>
     </div>
     </div>
