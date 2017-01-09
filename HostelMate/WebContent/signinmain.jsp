@@ -15,7 +15,7 @@
 
         <!--Header-->
         <div class="text-xs-center">
-            <h3><i class="fa fa-lock"></i>Log In:</h3>
+            <h3><i class="fa fa-sign-in"></i> Log In:</h3>
             <hr class="mt-2 mb-2">
         </div>
 
