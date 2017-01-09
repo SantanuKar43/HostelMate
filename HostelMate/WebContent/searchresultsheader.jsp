@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%String search = request.getParameter("search"); %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +44,10 @@
             <!--Navbar Brand-->
             <a class="navbar-brand" href="index.jsp"><i class="fa fa-building-o"></i> HostelMate</a>
             <form class="form-inline">
-                <input class="form-control" type="text" placeholder="Search">
+            	<div class="md-form">
+            		<i class="fa fa-search prefix" style="color:black"></i>
+                	<input style="width:100%" class="form-control" type="text" placeholder="Search" value=<%=search %>>
+            	</div>
             </form>
         </div>
         <!--/.Collapse content-->

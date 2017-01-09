@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/controller.Search")
 public class Search extends HttpServlet {
  @Override
- protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	// TODO Auto-generated method stub
 	String search = req.getParameter("search");
-	resp.sendRedirect("searchresults.jsp");
+	resp.sendRedirect("searchresults.jsp?search="+search);
  }
 }
