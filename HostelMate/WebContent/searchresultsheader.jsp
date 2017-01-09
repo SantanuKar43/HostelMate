@@ -43,10 +43,10 @@
         <div class="collapse navbar-toggleable-xs" id="collapseEx2">
             <!--Navbar Brand-->
             <a class="navbar-brand" href="index.jsp"><i class="fa fa-building-o"></i> HostelMate</a>
-            <form class="form-inline">
+            <form class="form-inline" action="controller.Search" method="get">
             	<div class="md-form">
             		<i class="fa fa-search prefix" style="color:black"></i>
-                	<input style="width:100%" class="form-control" type="text" placeholder="Search" value=<%=search %>>
+                	<input style="width:100%" class="form-control" name="search" type="text" placeholder="Search" value=<%=search %>>
             	</div>
             </form>
         </div>
