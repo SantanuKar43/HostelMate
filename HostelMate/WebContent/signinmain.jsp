@@ -10,12 +10,12 @@
 	<%} %>
 <form action="controller.SignUp" method="post">
 <!--Form without header-->
-<div class="card" style="width:40%;margin:5px auto">
+<div class="card" style="width:40%;margin:25px auto">
     <div class="card-block">
 
         <!--Header-->
         <div class="text-xs-center">
-            <h3><i class="fa fa-lock"></i> Register:</h3>
+            <h3><i class="fa fa-lock"></i>Log In:</h3>
             <hr class="mt-2 mb-2">
         </div>
 
@@ -30,27 +30,9 @@
             <label for="pwd"></label>
         </div>
         
-        <div class="md-form">
-            <input type="text" name="name" class="form-control" placeholder="Name" required>
-            <label for="name"></label>
-        </div>
         
-        <div class="md-form">
-            <select name="hostel" class="form-control" required>
-            	<option disabled style="display:none" selected value="">Hostel</option>
-            	<option>KCHR</option>
-            	<option>RHR</option>
-            </select>
-            <label for="branch"></label>
-        </div>
-        
-         <div class="md-form">
-            <input type="number" name="room" class="form-control" placeholder="Room number" required>
-            <label for="room"></label>
-        </div>
-
         <div class="text-xs-center">
-            <button class="btn btn-deep-purple" type="submit">Register</button>
+            <button class="btn btn-deep-purple" type="submit">Log In</button>
         </div>
 
     </div>
@@ -58,7 +40,7 @@
     <!--Footer-->
     <div class="modal-footer">
         <div class="options">
-            <p>Already registered? <a href="signin.jsp">Sign In</a></p>
+            <p>Not registered yet? <a href="signup.jsp">Sign Up</a></p>
             
         </div>
     </div>

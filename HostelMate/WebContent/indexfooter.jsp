@@ -32,7 +32,7 @@
             <li>
                 <h5>Make it easy for others to find you!</h5></li>
             <li><a href="signup.jsp" class="btn btn-danger">Sign up!</a></li>OR
-            <li><a href="signup.jsp" class="btn btn-primary">Edit Profile</a></li>
+            <li><a href="signin.jsp" class="btn btn-primary">Edit Your Profile</a></li>
         </ul>
     	</div>
     </div>

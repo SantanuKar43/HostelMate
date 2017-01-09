@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 
 
+
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
 
@@ -26,13 +27,14 @@
             </div>
             <!--/.Second column-->
         </div>
-         <div class="call-to-action">
-        <ul>
+        <div class="call-to-action">
+        <ul >
             <li>
-                <h5>Register yourself and make it easy for others to find you!</h5></li>
-            <li><a href="signup.jsp" class="btn btn-danger">Sign up!</a></li>
+                <h5>Make it easy for others to find you!</h5></li>
+            <li><a href="signup.jsp" class="btn btn-danger">Sign up!</a></li>OR
+            <li><a href="signin.jsp" class="btn btn-primary">Edit Your Profile</a></li>
         </ul>
-    </div>
+    	</div>
     </div>
     <!--/.Footer Links-->
 
