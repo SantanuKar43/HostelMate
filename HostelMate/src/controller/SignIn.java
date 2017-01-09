@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ResidentDao;
+import db.Resident;
+
 @WebServlet("/controller.SignIn")
 public class SignIn extends HttpServlet {
 	@Override
@@ -15,6 +18,13 @@ public class SignIn extends HttpServlet {
 		String regd_no=req.getParameter("regd_no");
 		String pwd=req.getParameter("pwd");
 		
+		Resident r = ResidentDao.getResident(regd_no);
+		if(r.getPwd().equals(pwd)){
+			System.out.println("signin success");
+		}
+		else{
+			System.out.println("signin failed");
+		}
 		
 		
 	}

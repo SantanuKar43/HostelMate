@@ -35,5 +35,17 @@ public class ResidentDao {
 		session.close();
 		return list;
 	}
+	public static Resident getResident(String regd_no) {
+		// TODO Auto-generated method stub
+		Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		Transaction t = session.beginTransaction();
+		t.begin();
+		
+		Resident r = (Resident) session.get(Resident.class, regd_no);
+		
+		t.commit();
+		session.close();
+		return r;
+	}
 	
 }
