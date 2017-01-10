@@ -19,14 +19,17 @@ public class SignIn extends HttpServlet {
 		String pwd=req.getParameter("pwd");
 		
 		Resident r = ResidentDao.getResident(regd_no);
-		if(r.getPwd().equals(pwd)){
-			System.out.println("signin success");
+		if(r!=null) {
+			if(r.getPwd().equals(pwd)){
+				System.out.println("signin success");
+			}
+			else {
+				resp.sendRedirect("signin.jsp?msg=Password incorrect");
+			}
 		}
-		else{
-			System.out.println("signin failed");
+		else {
+			resp.sendRedirect("signin.jsp?msg=Resident not registered yet!");
 		}
-		
-		
 	}
 
 }
