@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.ResidentDao;
 import db.Resident;
@@ -21,7 +22,9 @@ public class SignIn extends HttpServlet {
 		Resident r = ResidentDao.getResident(regd_no);
 		if(r!=null) {
 			if(r.getPwd().equals(pwd)){
-				System.out.println("signin success");
+				HttpSession session = req.getSession();
+				session.setAttribute("regd_no", regd_no);
+				resp.sendRedirect("userprofile.jsp");
 			}
 			else {
 				resp.sendRedirect("signin.jsp?msg=Password incorrect");
