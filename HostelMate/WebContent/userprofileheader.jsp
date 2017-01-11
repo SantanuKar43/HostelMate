@@ -1,3 +1,5 @@
+<%@page import="dao.ResidentDao"%>
+<%@page import="db.Resident"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -27,7 +29,10 @@
 
 <body>
 
-
+<%
+	String regd_no = (String)session.getAttribute("regd_no");
+	Resident r = ResidentDao.getResident(regd_no);
+%>
 <!--Navbar-->
 <nav class="navbar navbar-light ">
 
@@ -42,10 +47,13 @@
         <div class="collapse navbar-toggleable-xs" id="collapseEx2">
             <!--Navbar Brand-->
             <a class="navbar-brand" href="#"><i class="fa fa-building-o"></i> HostelMate</a>
-            
-            <form class="form-inline">
-                <input class="form-control" type="text" placeholder="Search">
-            </form>
+           	<div class="float-md-right">
+           		<img class="rounded-circle" style="width:35px;margin-right:5px" src="http://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg">
+           		<a class="btn btn-mdb btn-sm" id="user-name"><%=r.getName() %></a>
+           		<div class="" style="height:30px;text-align:right">
+           			<a id="logout-btn" style="display:none;" href="controller.LogOut" class=""><i class="fa fa-sign-out"></i> Log out</a>
+           		</div>
+           	</div>
         </div>
         <!--/.Collapse content-->
 

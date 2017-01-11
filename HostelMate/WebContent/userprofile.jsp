@@ -4,8 +4,9 @@
     	String regd_no = (String)session.getAttribute("regd_no");
     	if(regd_no==null) {
     		response.sendRedirect("signin.jsp?msg=Log in to continue");
+    		return;
     	}
     %>
 <jsp:include page="userprofileheader.jsp"></jsp:include>
 <jsp:include page="userprofilemain.jsp"></jsp:include>
-<jsp:include page="signupfooter.jsp"></jsp:include>
+<jsp:include page="userprofilefooter.jsp"></jsp:include>

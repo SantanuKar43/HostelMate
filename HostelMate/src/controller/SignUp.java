@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.exception.ConstraintViolationException;
 
@@ -37,6 +38,9 @@ public class SignUp extends HttpServlet {
 		String msg=null;
 		try{
 			ResidentDao.save(r);
+			HttpSession session = req.getSession();
+			session.setAttribute("regd_no", regd_no);
+			resp.sendRedirect("userprofile.jsp");
 		}
 		catch(ConstraintViolationException e){
 			msg = "Resident already registered!";

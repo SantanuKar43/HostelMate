@@ -57,6 +57,13 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 	
+	<script>
+		$(document).ready(function(){
+			$('#user-name').click(function(){
+				$('#logout-btn').fadeToggle();
+			});
+		});
+	</script>
 	
 </body>
 
