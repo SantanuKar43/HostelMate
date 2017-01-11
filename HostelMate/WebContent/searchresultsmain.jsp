@@ -21,17 +21,17 @@
 	   		System.out.println(r.getName());
    	%>
 	
- 		<div class="media">
+ 		<div class="media" style="padding:5px" >
         	<a class="media-left waves-light">
-            	<img class="rounded-circle" src="http://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg" style="margin:0px 4px 10px 4px;">
+            	<img width="50px" class="rounded-circle" src="http://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg" style="margin:0px 4px 10px 4px;">
         	</a>
         	<div class="media-body">
             	<h4 class="media-heading"><%=r.getName() %></h4>
-            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!</p>
+            	<p><strong class="blue-text">HOSTEL:</strong> <%=r.getHostel() %></p>
         	</div>
     	</div>
     	<%if(i.hasNext()){ %>
-    	<hr class="my-2">
+    	<hr class="my-1">
     	<%} %>
 	<%} %>
 		</div>
