@@ -14,6 +14,9 @@
 	<h1 class="blue-text" style="text-align:center">'<%=search %>' returned <%=size %> results.</h1>
 	
 	<div class="container">	
+	<%	
+		if(size!=0){
+	%>
 		<div class="jumbotron">
 	<%
    		while(i.hasNext()) {
@@ -35,5 +38,6 @@
     	<%} %>
 	<%} %>
 		</div>
+		<%} %>
 	</div>
 </div>
