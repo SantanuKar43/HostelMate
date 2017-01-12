@@ -64,11 +64,25 @@
 				$('#logout-btn').fadeToggle();
 			});
 			
-			$("#photo-form").submit(function(){
+			$("#photo-form").submit(function(e){
 				var url="controller.UploadPhoto";
+				$.ajax({
+					type:"POST",
+					url:url,
+		            processData: false,
+		            contentType:false,
+					data:new FormData(this),
+					success:function(data)
+					{
+						alert("photo upload success!");
+						$('#photo-file').val("");
+					}
+				});
+				e.preventDefault();
+				
 			});
 			
-			$('#profile-form').submit(function(){
+			$('#profile-form').submit(function(e){
 				var url="controller.UpdateProfile";
 			    $.ajax({
 			           type: "POST",

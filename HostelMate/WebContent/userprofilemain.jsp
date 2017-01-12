@@ -30,7 +30,7 @@
         <div class="md-form">
         	<form id="photo-form" method="post" enctype="multipart/form-data">
 				<ul class="md-form" style="list-style:none">
-					<input type="file" value="Choose Photo" name="file" size="50">
+					<input id="photo-file" type="file" value="Choose Photo" name="file" size="50">
 					<button type="submit" class="btn btn-default btn-sm float-xs-right"><i class="fa fa-upload" aria-hidden="true"></i> upload Photo</button>
 				</ul>
 			</form>
