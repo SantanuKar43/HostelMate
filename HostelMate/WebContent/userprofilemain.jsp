@@ -26,6 +26,15 @@
         </div>
 
         <!--Body-->
+        
+        <div class="md-form">
+        	<form action="controller.UploadPhoto" method="post" enctype="multipart/form-data">
+				<ul class="updatephoto" style="list-style:none">
+					<li><input type="file" value="Choose Photo" name="file" size="50"></li>
+					<li><input type="submit" class="btn btn-default" value="Update Photo"></li>
+				</ul>
+			</form>
+        </div>
     
         <div class="md-form">
             <input type="text" name="name" value="<%=r.getName() %>" class="form-control" placeholder="Name" required>
