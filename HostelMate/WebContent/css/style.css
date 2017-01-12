@@ -1,7 +1,7 @@
 /* YOUR CUSTOM STYLES */
 .centered {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -35%);
