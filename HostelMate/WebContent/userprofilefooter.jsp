@@ -60,10 +60,6 @@
 	<script>
 		$(document).ready(function(){
 			
-			$('#user-name').click(function(){
-				$('#logout-btn').fadeToggle();
-			});
-			
 			$("#photo-form").submit(function(e){
 				var url="controller.UploadPhoto";
 				$.ajax({

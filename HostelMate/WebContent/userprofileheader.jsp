@@ -49,10 +49,8 @@
             <a class="navbar-brand" href="#"><i class="fa fa-building-o"></i> HostelMate</a>
            	<div class="float-md-right">
            		<img id="photo-account" class="rounded-circle" style="width:35px;height:35px;margin-right:5px;object-fit:cover" src="controller.GetPhoto?image=<%=r.getImage()%>">
-           		<a class="btn btn-mdb btn-sm" id="user-name"><%=r.getName() %></a>
-           		<div class="" style="height:30px;text-align:right">
-           			<a id="logout-btn" style="display:none;" href="controller.LogOut" class=""><i class="fa fa-sign-out"></i> Log out</a>
-           		</div>
+           		<a id="user-name"><%=r.getName() %></a>
+           		<a id="logout-btn" style="margin-left:20px" href="controller.LogOut" class="btn btn-primary btn-sm"><i class="fa fa-sign-out"></i> Log out</a>
            	</div>
         </div>
         <!--/.Collapse content-->
