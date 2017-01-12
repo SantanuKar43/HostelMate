@@ -76,6 +76,10 @@
 					{
 						alert("photo upload success!");
 						$('#photo-file').val("");
+						var src1=$('#photo-img').attr('src');
+						var src2=$('#photo-account').attr('src');
+						$('#photo-img').attr('src',src1+'&param='+new Date().getTime());
+						$('#photo-account').attr('src',src2+'&param='+new Date().getTime());
 					}
 				});
 				e.preventDefault();

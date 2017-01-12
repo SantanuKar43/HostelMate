@@ -26,11 +26,14 @@
         </div>
 
         <!--Body-->
-        
+        <a  class="media-left waves-light">
+           	<img id="photo-img" class="rounded" style="margin:10px;width:150px;height:150px;border-radius:100px;object-fit:cover" src="controller.GetPhoto?image=<%=r.getImage() %>" >
+        </a>
         <div class="md-form">
+        	
         	<form id="photo-form" method="post" enctype="multipart/form-data">
 				<ul class="md-form" style="list-style:none">
-					<input id="photo-file" type="file" value="Choose Photo" name="file" size="50">
+					<input id="photo-file"  type="file" style="width:240px;margin-top:6px;" value="Choose Photo" name="file" size="20">
 					<button type="submit" class="btn btn-default btn-sm float-xs-right"><i class="fa fa-upload" aria-hidden="true"></i> upload Photo</button>
 				</ul>
 			</form>
