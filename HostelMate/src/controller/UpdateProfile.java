@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import dao.ResidentDao;
 import db.Resident;
+import utilities.TextDecorate;
 
 @WebServlet("/controller.UpdateProfile")
 public class UpdateProfile extends HttpServlet {
@@ -19,6 +20,7 @@ public class UpdateProfile extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession sess = req.getSession();
 		String name = req.getParameter("name");
+		name = TextDecorate.titleCase(name);
 		String room = req.getParameter("room");
 		String hostel = req.getParameter("hostel");
 		String regd_no = (String)sess.getAttribute("regd_no");

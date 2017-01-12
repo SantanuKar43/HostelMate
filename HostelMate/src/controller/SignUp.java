@@ -13,6 +13,7 @@ import org.hibernate.exception.ConstraintViolationException;
 
 import dao.ResidentDao;
 import db.Resident;
+import utilities.TextDecorate;
 
 @WebServlet("/controller.SignUp")
 public class SignUp extends HttpServlet {
@@ -22,6 +23,7 @@ public class SignUp extends HttpServlet {
 		String regd_no = req.getParameter("regd_no");
 		String pwd = req.getParameter("pwd");
 		String name = req.getParameter("name");
+		name = TextDecorate.titleCase(name);
 		String hostel = req.getParameter("hostel");
 		String room = req.getParameter("room");
 		String image = "default-image.jpg";
