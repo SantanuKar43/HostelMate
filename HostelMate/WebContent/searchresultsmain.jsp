@@ -23,7 +23,7 @@
 	
  		<div class="media" style="padding:5px" >
         	<a class="media-left waves-light">
-            	<img width="50px" class="rounded-circle" src="http://mdbootstrap.com/img/Photos/Avatars/avatar-13.jpg" style="margin:0px 4px 10px 4px;">
+            	<img class="rounded-circle" src="controller.GetPhoto?image=<%=r.getImage() %>" style="width:50px;height:50px;object-fit:cover;margin:0px 4px 10px 4px;">
         	</a>
         	<div class="media-body">
             	<h4 class="media-heading"><%=r.getName() %></h4>
