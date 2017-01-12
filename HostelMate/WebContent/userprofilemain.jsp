@@ -14,7 +14,7 @@
 		String regd_no = (String)session.getAttribute("regd_no");
 		Resident r = ResidentDao.getResident(regd_no);
 	%>
-<form action="controller.UpdateProfile" method="post">
+
 <!--Form without header-->
 <div class="card" style="width:40%;margin:5px auto">
     <div class="card-block">
@@ -35,7 +35,7 @@
 				</ul>
 			</form>
         </div>
-    
+    	<form id="profile-form" method="post">
         <div class="md-form">
             <input type="text" name="name" value="<%=r.getName() %>" class="form-control" placeholder="Name" required>
             <label for="name"></label>
@@ -58,14 +58,13 @@
         <div class="text-xs-center">
             <button class="btn btn-deep-purple" type="submit">Update Profile</button>
         </div>
-
+		</form>
     </div>
 
     
 
 </div>
 <!--/Form without header-->
-</form>
 </div>
 
 

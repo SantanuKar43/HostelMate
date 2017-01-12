@@ -47,5 +47,15 @@ public class ResidentDao {
 		session.close();
 		return r;
 	}
+	public static void updateProfile(Resident r){
+		Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		Transaction t = session.beginTransaction();
+		t.begin();
+		
+		session.update(r);
+		
+		t.commit();
+		session.close();
+	}
 	
 }

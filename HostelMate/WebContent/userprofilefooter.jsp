@@ -64,7 +64,24 @@
 				$('#logout-btn').fadeToggle();
 			});
 			
-			$("#photo-form").ajaxForm({url: 'server.php', type: 'post'})
+			$("#photo-form").submit(function(){
+				var url="controller.UploadPhoto";
+			});
+			
+			$('#profile-form').submit(function(){
+				var url="controller.UpdateProfile";
+			    $.ajax({
+			           type: "POST",
+			           url: url,
+			           data: $("#profile-form").serialize(), // serializes the form's elements.
+			           success: function(data)
+			           {
+			               alert("profile updated successfully");
+			           }
+			         });
+
+			    e.preventDefault();
+			});
 		});
 	</script>
 	
