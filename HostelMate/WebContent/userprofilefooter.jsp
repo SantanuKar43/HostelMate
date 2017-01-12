@@ -59,9 +59,12 @@
 	
 	<script>
 		$(document).ready(function(){
+			
 			$('#user-name').click(function(){
 				$('#logout-btn').fadeToggle();
 			});
+			
+			$("#photo-form").ajaxForm({url: 'server.php', type: 'post'})
 		});
 	</script>
 	

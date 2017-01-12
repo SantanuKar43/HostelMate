@@ -28,12 +28,10 @@
         <!--Body-->
         
         <div class="md-form">
-        	<form action="controller.UploadPhoto" method="post" enctype="multipart/form-data">
+        	<form id="photo-form" method="post" enctype="multipart/form-data">
 				<ul class="md-form" style="list-style:none">
-					<label class="fileContainer">
-						<input type="file" value="Choose Photo" name="file" size="50">
-					</label>
-					<button type="submit" class="btn btn-default float-xs-right"><i class="fa fa-upload" aria-hidden="true"></i> upload Photo</button>
+					<input type="file" value="Choose Photo" name="file" size="50">
+					<button type="submit" class="btn btn-default btn-sm float-xs-right"><i class="fa fa-upload" aria-hidden="true"></i> upload Photo</button>
 				</ul>
 			</form>
         </div>
