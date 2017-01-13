@@ -9,10 +9,9 @@
 		List list = ResidentDao.getResidents(search);
 		Iterator i = list.iterator();
 		int size = list.size();
-		System.out.println(size);
     %>
    <div style="height:100vh">
-	<h1 class="blue-text" style="text-align:center;margin-bottom:10px">'<%=search %>' returned <%=size %> results.</h1>
+	<h1 id='search-msg' class="blue-text" style="text-align:center;margin-bottom:10px"></h1>
 	
 	<div id='search-results' class="container">	
 	</div>

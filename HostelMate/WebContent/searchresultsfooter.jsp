@@ -69,21 +69,37 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 	
 	<script>
+		var search;
 		var ajaxGetResults = function(){
-			var search = $('#search-input').attr('value');
-			$.ajax({url:'controller.Search?search='+search,success:function(result){
-				$('#search-results').html(result);
-			}});
+			search = $('#search-input').val();
+			if(search){
+				$.ajax({url:'controller.Search?search='+search,success:function(result){
+					$('#search-results').html(result);
+				}});
+			}
 		};
+		var ajaxGetMsg = function(){
+			search = $('#search-input').val();
+			if(search){	
+				$.ajax({url:'controller.SearchMsg?search='+search,success:function(result){
+					$('#search-msg').html(result);
+				}});
+			}
+		}
 		$(document).ready(function(){
-			ajaxGetResults();
-			
-			$('#search-input').on("keydown",function(e){
-				if(e.which==13){
-					ajaxGetResults();
-				}				
+			$('#search-form').submit(function(e){
+				$('#search-input').blur();
+				e.preventDefault();
+				
 			});
+			ajaxGetMsg();
+			ajaxGetResults();
+			$('#search-input').keyup(function(){
+				ajaxGetMsg();
+				ajaxGetResults();
+			});	
 		});
+		
 		
 	</script>
 	
