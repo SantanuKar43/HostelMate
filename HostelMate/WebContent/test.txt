@@ -1,9 +1,4 @@
-shonu : hi
-Kuchi : hello baby!!!!
-shonu:hello
-shonu:hi baby
-Kuchi:Your are awesome baby!!!
-shonu:baby it works!!!
+
 
 Tools required for pagination:-
 	to set the first result - criteria.setFirstResult(int);
