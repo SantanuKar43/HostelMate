@@ -6,7 +6,7 @@
     <div style="height: 100vh" class="container">
         <div class="centered" style="height:30vw;width:40vw" id="search-div">
             <h1 class="animated fadeIn" id="search-div-inner">Can't find your mate's room?</h1>
-            <form class="form" action="controller.Search" method="get">
+            <form class="form" action="searchresults.jsp" method="get">
             	<input required class="form-control" type="text" name="search" id="search" placeholder="Tell us their name and we will help you find their room">
         	</form>
         </div>

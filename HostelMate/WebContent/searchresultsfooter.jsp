@@ -68,6 +68,24 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 	
+	<script>
+		var ajaxGetResults = function(){
+			var search = $('#search-input').attr('value');
+			$.ajax({url:'controller.Search?search='+search,success:function(result){
+				$('#search-results').html(result);
+			}});
+		};
+		$(document).ready(function(){
+			ajaxGetResults();
+			
+			$('#search-input').on("keydown",function(e){
+				if(e.which==13){
+					ajaxGetResults();
+				}				
+			});
+		});
+		
+	</script>
 	
 </body>
 
