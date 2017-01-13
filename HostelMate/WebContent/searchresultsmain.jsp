@@ -9,6 +9,11 @@
 		List list = ResidentDao.getResidents(search);
 		Iterator i = list.iterator();
 		int size = list.size();
+		Resident resident_array[] = new Resident[list.size()];
+		list.toArray(resident_array);
+		for(Resident r:resident_array){
+			System.out.println("test:"+r.getName()+" "+r.getHostel());
+		}
     %>
    <div style="height:100vh">
 	<h1 class="blue-text" style="text-align:center;margin-bottom:10px">'<%=search %>' returned <%=size %> results.</h1>
@@ -21,7 +26,6 @@
 	<%
    		while(i.hasNext()) {
 	   		Resident r = (Resident)i.next();
-	   		System.out.println(r.getName());
    	%>
 	
  		<div class="media" style="padding:5px;" >
