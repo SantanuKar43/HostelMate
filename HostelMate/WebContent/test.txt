@@ -1,5 +1,4 @@
 
-
 Tools required for pagination:-
 	to set the first result - criteria.setFirstResult(int);
 	to set the limit - criteria.setMaxResults(int);
