@@ -3,4 +3,9 @@ Kuchi : hello baby!!!!
 shonu:hello
 shonu:hi baby
 Kuchi:Your are awesome baby!!!
-shonu:baby it works!!!1
+shonu:baby it works!!!
+
+Tools required for pagination:-
+	to set the first result - criteria.setFirstResult(int);
+	to set the limit - criteria.setMaxResults(int);
+	where 'criteria' is an object of 'org.hibernate.Criteria' class

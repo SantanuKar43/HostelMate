@@ -35,6 +35,24 @@ public class ResidentDao {
 		session.close();
 		return list;
 	}
+	
+	public static List getResidents(String search,int first,int max) {
+		List list = null;
+		Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();
+		Transaction t = session.beginTransaction();
+		t.begin();
+		
+		Criteria cr = session.createCriteria(Resident.class);
+		cr.add(Restrictions.ilike("name", search,MatchMode.START));
+		cr.setFirstResult(first);
+		cr.setMaxResults(max);
+		list = cr.list();
+		
+		t.commit();
+		session.close();
+		return list;
+	}
+	
 	public static Resident getResident(String regd_no) {
 		// TODO Auto-generated method stub
 		Session session = new AnnotationConfiguration().configure().buildSessionFactory().openSession();

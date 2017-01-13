@@ -11,26 +11,27 @@
 		int size = list.size();
     %>
    <div style="height:100vh">
-	<h1 class="blue-text" style="text-align:center">'<%=search %>' returned <%=size %> results.</h1>
+	<h1 class="blue-text" style="text-align:center;margin-bottom:10px">'<%=search %>' returned <%=size %> results.</h1>
 	
 	<div class="container">	
 	<%	
 		if(size!=0){
 	%>
-		<div class="jumbotron">
+		<div class="jumbotron" style="width:70%;margin:auto">
 	<%
    		while(i.hasNext()) {
 	   		Resident r = (Resident)i.next();
 	   		System.out.println(r.getName());
    	%>
 	
- 		<div class="media" style="padding:5px" >
+ 		<div class="media" style="padding:5px;" >
         	<a class="media-left waves-light">
             	<img class="rounded-circle" src="controller.GetPhoto?image=<%=r.getImage() %>" style="width:50px;height:50px;object-fit:cover;margin:0px 4px 10px 4px;">
         	</a>
         	<div class="media-body">
             	<h4 class="media-heading"><%=r.getName() %></h4>
-            	<p><strong class="blue-text">HOSTEL:</strong> <%=r.getHostel() %></p>
+            	<p class="float-md-left"><strong class="blue-text ">HOSTEL:</strong> <%=r.getHostel() %></p>
+            	<p class="float-md-right"><strong class="blue-text ">ROOM:</strong> <%=r.getRoom() %></p>
         	</div>
     	</div>
     	<%if(i.hasNext()){ %>
@@ -39,5 +40,33 @@
 	<%} %>
 		</div>
 		<%} %>
+		
+	<%
+		if(size>4) {
+	%>	
+<nav style="width:70%;text-align:center;margin:20px auto">
+  <ul class="pagination pagination-lg" >
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<%} %>		
+		
+			
 	</div>
 </div>
