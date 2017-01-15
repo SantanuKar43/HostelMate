@@ -78,7 +78,7 @@
 				search=" ";
 			}
 			if(search){
-				$.ajax({url:'controller.Search?search='+search+'&index='+index,success:function(result){
+				$.ajax({url:'controller.Search?search='+search,success:function(result){
 					$('#search-results').html(result);
 				}});
 			}

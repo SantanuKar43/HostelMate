@@ -16,7 +16,7 @@
 	<div id='search-results' class="container">	
 	</div>
 			
-	<%
+	<!-- <%
 		if(size>4) {
 	%>
 	<div class="container">	
@@ -42,6 +42,6 @@
   </ul>
 </nav>
 </div>
-<%} %>	
+<%} %>	-->
 	
 </div>
