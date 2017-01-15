@@ -109,7 +109,6 @@
 			
 			$('.index').click(function(){
 				if(!$(this).parent().hasClass('active')){
-					alert('chicken');
 					$('.active').removeClass('active');
 					$(this).parent().addClass('active');
 				}
