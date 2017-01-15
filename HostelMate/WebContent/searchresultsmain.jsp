@@ -28,11 +28,11 @@
         <span class="sr-only">Previous</span>
       </a>
     </li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">4</a></li>
-    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    
+    <%for(int x=1 ; x <= ((size%4==0)?(size/4):(size/4+1)) ; x++) {%>
+    <li class="page-item"><a class="page-link index" href="#"><%=x %></a></li>
+    <%} %>
+    
     <li class="page-item">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>

@@ -25,7 +25,7 @@ public class Search extends HttpServlet {
 	if(search.equals("")){
 		return; 
 	}
-	List list = ResidentDao.getResidents(search,index,7);
+	List list = ResidentDao.getResidents(search,index,4);
 	Iterator i = list.iterator();
 	int size = list.size();
 	Resident resident_array[] = new Resident[list.size()];

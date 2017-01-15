@@ -78,7 +78,7 @@
 				search=" ";
 			}
 			if(search){
-				$.ajax({url:'controller.Search?search='+search+"&index="+index,success:function(result){
+				$.ajax({url:'controller.Search?search='+search+'&index='+index,success:function(result){
 					$('#search-results').html(result);
 				}});
 			}
@@ -106,6 +106,14 @@
 				ajaxGetMsg();
 				ajaxGetResults();
 			});	
+			
+			$('.index').click(function(){
+				if(!$(this).parent().hasClass('active')){
+					alert('chicken');
+					$('.active').removeClass('active');
+					$(this).parent().addClass('active');
+				}
+			})
 		});
 		
 		
