@@ -98,7 +98,7 @@
 		
 		$(document).ready(function(){
 			
-			$('.pagination li:nth-child(2)').addClass('active');
+			
 			
 			$('#search-form').submit(function(e){
 				$('#search-input').blur();
@@ -108,12 +108,20 @@
 			
 			ajaxGetMsg();
 			ajaxGetResults();
+			
+			$.ajax({url:'controller.Paginator?search='+search,success:function(result){
+				$('.pagination').html(result);
+			}});
+			
 			$('#search-input').keyup(function(){
 				ajaxGetMsg();
 				ajaxGetResults();
+				$.ajax({url:'controller.Paginator?search='+search,success:function(result){
+					$('.pagination').html(result);
+				}});
 			});	
 			
-			$('.index').click(function(){
+			$('.pagination').on('click','.index',function(){
 				if(!$(this).parent().hasClass('active')){
 					index = parseInt($(this).html()) - 1;
 					ajaxGetResults();
