@@ -16,24 +16,25 @@
 	<div id='search-results' class="container">	
 	</div>
 			
-	<!-- <%
+	<%
 		if(size>4) {
 	%>
-	<div class="container">	
+	<div class="container" style="position:absolute;bottom:10px;width:100%">	
 <nav style="width:70%;text-align:center;margin:20px auto">
   <ul class="pagination pagination-lg" >
-    <li class="page-item disabled">
+    <li class="page-item disabled left-arrow">
       <a class="page-link" href="#" aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
         <span class="sr-only">Previous</span>
       </a>
     </li>
     
+    
     <%for(int x=1 ; x <= ((size%4==0)?(size/4):(size/4+1)) ; x++) {%>
     <li class="page-item"><a class="page-link index" href="#"><%=x %></a></li>
     <%} %>
     
-    <li class="page-item">
+    <li class="page-item right-arrow">
       <a class="page-link" href="#" aria-label="Next">
         <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span>
@@ -42,6 +43,6 @@
   </ul>
 </nav>
 </div>
-<%} %>	-->
+<%} %>	
 	
 </div>

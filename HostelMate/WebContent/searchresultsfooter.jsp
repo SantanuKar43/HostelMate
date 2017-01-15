@@ -70,19 +70,19 @@
 	
 	<script>
 		var search;
-		var index;
+		var index = 0;
 		var ajaxGetResults = function(){
 			search = $('#search-input').val();
-			index = 0;
 			if($.trim(search).length===0){
 				search=" ";
 			}
 			if(search){
-				$.ajax({url:'controller.Search?search='+search,success:function(result){
+				$.ajax({url:'controller.Search?search='+search+'&index='+index,success:function(result){
 					$('#search-results').html(result);
 				}});
 			}
 		};
+		
 		var ajaxGetMsg = function(){
 			search = $('#search-input').val();
 			if($.trim(search).length===0){
@@ -93,13 +93,19 @@
 					$('#search-msg').html(result);
 				}});
 			}
-		}
+		};
+		
+		
 		$(document).ready(function(){
+			
+			$('.pagination li:nth-child(2)').addClass('active');
+			
 			$('#search-form').submit(function(e){
 				$('#search-input').blur();
 				e.preventDefault();
-				
 			});
+			
+			
 			ajaxGetMsg();
 			ajaxGetResults();
 			$('#search-input').keyup(function(){
@@ -109,6 +115,8 @@
 			
 			$('.index').click(function(){
 				if(!$(this).parent().hasClass('active')){
+					index = parseInt($(this).html()) - 1;
+					ajaxGetResults();
 					$('.active').removeClass('active');
 					$(this).parent().addClass('active');
 				}
