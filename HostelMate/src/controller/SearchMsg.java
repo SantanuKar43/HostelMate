@@ -19,6 +19,9 @@ public class SearchMsg extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String search = req.getParameter("search");
+		if(search.equals("")){
+			return; 
+		}
 		List list = ResidentDao.getResidents(search);
 		Iterator i = list.iterator();
 		int size = list.size();

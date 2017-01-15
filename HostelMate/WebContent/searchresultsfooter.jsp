@@ -72,6 +72,9 @@
 		var search;
 		var ajaxGetResults = function(){
 			search = $('#search-input').val();
+			if($.trim(search).length===0){
+				search=" ";
+			}
 			if(search){
 				$.ajax({url:'controller.Search?search='+search,success:function(result){
 					$('#search-results').html(result);
@@ -80,6 +83,9 @@
 		};
 		var ajaxGetMsg = function(){
 			search = $('#search-input').val();
+			if($.trim(search).length===0){
+				search=" ";
+			}
 			if(search){	
 				$.ajax({url:'controller.SearchMsg?search='+search,success:function(result){
 					$('#search-msg').html(result);
