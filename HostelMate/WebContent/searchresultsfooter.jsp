@@ -70,13 +70,15 @@
 	
 	<script>
 		var search;
+		var index;
 		var ajaxGetResults = function(){
 			search = $('#search-input').val();
+			index = 0;
 			if($.trim(search).length===0){
 				search=" ";
 			}
 			if(search){
-				$.ajax({url:'controller.Search?search='+search,success:function(result){
+				$.ajax({url:'controller.Search?search='+search+"&index="+index,success:function(result){
 					$('#search-results').html(result);
 				}});
 			}
