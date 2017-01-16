@@ -16,16 +16,14 @@
 	<div id='search-results' class="container">	
 	</div>
 			
-	<%
-		if(size>4) {
-	%>
-	<div class="container" style="position:absolute;bottom:10px;width:100%">	
-<nav style="width:70%;text-align:center;margin:20px auto">
-  <ul class="pagination pagination-lg" >
+	
+	<div id="navigation-div" class="container" style="position:absolute;bottom:10px;width:100%">	
+	<nav style="width:70%;text-align:center;margin:20px auto">
+  	<ul class="pagination pagination-lg" >
   
-  </ul>
-</nav>
+  	</ul>
+	</nav>
 </div>
-<%} %>	
+
 	
 </div>

@@ -71,6 +71,28 @@
 	<script>
 		var search;
 		var index = 0;
+		var size;
+		
+		var ajaxGetSize = function(){
+			search = $('#search-input').val();
+			
+			if($.trim(search).length===0){
+				search=" ";
+			}
+			if(search){
+				$.ajax({url:'controller.SearchSize?search='+search,success:function(result){
+					size = parseInt(result);
+					if(size>4){
+						//code to display navigation div
+						$("#navigation-div").css('display','block');
+					}
+					else{
+						$("#navigation-div").css('display','none');			
+					}
+				}});
+			}
+		};
+		
 		var ajaxGetResults = function(){
 			search = $('#search-input').val();
 			if($.trim(search).length===0){
@@ -82,6 +104,8 @@
 				}});
 			}
 		};
+		
+	
 		
 		var ajaxGetMsg = function(){
 			search = $('#search-input').val();
@@ -97,9 +121,6 @@
 		
 		
 		$(document).ready(function(){
-			
-			
-			
 			$('#search-form').submit(function(e){
 				$('#search-input').blur();
 				e.preventDefault();
@@ -108,6 +129,7 @@
 			
 			ajaxGetMsg();
 			ajaxGetResults();
+			ajaxGetSize();
 			
 			$.ajax({url:'controller.Paginator?search='+search,success:function(result){
 				$('.pagination').html(result);
@@ -115,7 +137,9 @@
 			
 			$('#search-input').keyup(function(){
 				ajaxGetMsg();
+				index=0;
 				ajaxGetResults();
+				ajaxGetSize();
 				$.ajax({url:'controller.Paginator?search='+search,success:function(result){
 					$('.pagination').html(result);
 				}});
